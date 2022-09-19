@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "Link tracker",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "logo.png"
+    },
+    "permissions": [
+        "tabs", "activeTab"
+    ],
+    "content_scripts": [
+     {
+        "matches": [
+            "http://*/*",
+             "https://*/*"
+            ],
+            "js": [
+                "index.js"
+            ],
+            "all_frames": true
+     }]
+}
